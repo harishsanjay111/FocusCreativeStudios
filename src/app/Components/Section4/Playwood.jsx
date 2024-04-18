@@ -1,18 +1,16 @@
-
 'use client'
 import React from 'react';
+import { Button, ChevronRight } from '@relume_io/relume-ui';
 
-
-const BambooMats = (props) => {
+const Plywood = (props) => {
   const { featureSections, image } = { ...Layout34Defaults, ...props };
 
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-      <div className='font-bold text-center pb-[5rem] text-[30px]'>Bamboo Mats</div>
+      <div className='font-bold text-center pb-[5rem] text-[30px]'>Plywood</div>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
-         
-        <div className="grid grid-cols-1 gap-x-6 gap-y-8 py-2">
+          <div className="grid grid-cols-1 gap-x-6 gap-y-8 py-2">
             {featureSections.map((section, index) => (
               <div key={`${section.heading}-${index}`} className="flex self-start">
               <div className="mr-6 flex-none self-start">
@@ -21,13 +19,13 @@ const BambooMats = (props) => {
                 <div>
                   <h1 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">{section.heading}</h1>
                   <p>{section.description}</p>
-                
+                  
                 </div>
               </div>
             ))}
           </div>
           <div>
-            <img src={'/bamboomatscollege.png'} className="w-full object-cover rounded-[5px]"  />
+            <img src={'./playwood2.jpeg'} className="w-full object-cover rounded-[5px]" alt={image.alt} />
           </div>
         </div>
       </div>
@@ -39,31 +37,31 @@ const Layout34Defaults = {
   featureSections: [
     {
       
-      heading: 'Eco-friendly Flooring',
+      heading: 'Shipping and Logistics',
       description:
-        'Bamboo mats serve as an environmentally sustainable alternative to traditional flooring materials.',
-    
+        'Wooden pallets are widely used in the transportation and logistics industry for stacking, storing, and transporting goods efficiently.',
+      buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
     {
       
-      heading: 'Natural Aesthetics',
+      heading: 'Storage and Warehousing',
       description:
-        'They add a touch of natural beauty to indoor and outdoor spaces with their unique grain patterns and warm tones.',
-      
+        'They provide a stable and organized platform for storing products in warehouses, distribution centers, and storage facilities.',
+      buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
     {
      
-      heading: 'Health Benefits',
+      heading: 'Material Handling',
       description:
-        'Bamboo mats are hypoallergenic and resistant to dust mites, making them a healthier choice for allergy sufferers.',
-     
+        'Wooden pallets facilitate the movement of materials using forklifts, pallet jacks, and other handling equipment, streamlining warehouse operations.',
+      buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
   ],
- 
+  image: {
+    src: './playwood2.jpeg',
+    alt: 'Placeholder image',
+  },
 };
 
-export default BambooMats;
-
-
-
+export default Plywood;
 

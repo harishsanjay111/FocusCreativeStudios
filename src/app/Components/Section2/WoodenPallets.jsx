@@ -8,6 +8,7 @@ const WoodenPallets = (props) => {
   return (
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
+      <div className='font-bold text-center pb-[5rem] text-[30px]'>Wooden Pallets</div>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 py-2">
             {featureSections.map((section, index) => (
@@ -18,25 +19,13 @@ const WoodenPallets = (props) => {
                 <div>
                   <h1 className="mb-3 text-xl font-bold md:mb-4 md:text-2xl">{section.heading}</h1>
                   <p>{section.description}</p>
-                  <div className="mt-5 flex items-center gap-x-4 md:mt-6">
-                    {section.buttons.map((button, index) => (
-                      <Button
-                        key={`${button.title}-${index}`}
-                        variant={button.variant}
-                        size={button.size}
-                        iconRight={button.iconRight}
-                        iconLeft={button.iconLeft}
-                      >
-                        {button.title}
-                      </Button>
-                    ))}
-                  </div>
+                  
                 </div>
               </div>
             ))}
           </div>
           <div>
-            <img src={'woodenpallet.png'} className="w-full object-cover" alt={image.alt} />
+            <img src={'woodenpallet.png'} className="w-full object-cover rounded-[5px]" alt={image.alt} />
           </div>
         </div>
       </div>

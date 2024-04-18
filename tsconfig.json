@@ -21,6 +21,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/Section1/BambooMats.jsx", "src/app/Components/SectionsData.js", "src/app/Components/Section2/WoodenPallets.jsx", "src/app/Components/InteriorDesign/InteriorDesign.js", "src/app/page.js", "src/app/Components/InteriorDesign/InteriorDesign.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/app/Components/Header/Hero/Hero.jsx", "src/app/Components/SectionMain1/Have.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/app/Components/Section1/BambooMats.jsx", "src/app/Components/SectionsData.js", "src/app/Components/Section2/WoodenPallets.jsx", "src/app/Components/InteriorDesign/InteriorDesign.js", "src/app/page.js", "src/app/Components/InteriorDesign/InteriorDesign.jsx", "src/app/layout.jsx", "src/app/page.jsx", "src/app/Components/Header/Hero/Hero.jsx", "src/app/Components/SectionMain1/Have.jsx", "src/app/Navbar/Navbar.jsx", "src/app/Components/Section4/Playwood.jsx"],
   "exclude": ["node_modules"]
 }
