@@ -1,27 +1,47 @@
 
 'use client'
-
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import clsx from "clsx";
 import { SolidChevronDown, Button } from "@relume_io/relume-ui";
 import { AnimatePresence, motion } from "framer-motion";
-
+import Image from "next/image";
+import "./Navbar.css"
 const Navbar = (props) => {
   const { logo, links, buttons } = {
     ...Navbar2Defaults,
     ...props,
   };
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      requestAnimationFrame(() => {
+        if (window.innerWidth >= 768) { // Adjust this value as per your design for large screens
+          setMobileMenuOpen(true);
+        } else {
+          setMobileMenuOpen(false);
+        }
+      });
+    };
+  
+    // Call handleResize initially and add event listener
+    handleResize();
+    window.addEventListener('resize', handleResize);
+  
+    // Remove event listener on cleanup
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
   const genericHamburgerLine = `h-0.5 w-6 my-[3px] bg-black transition ease-in-out transform duration-300 lg:hidden`;
   return (
+    <div>
+    
     <nav className="flex h-auto min-h-16 w-full items-center border-b border-black bg-white px-[5%] lg:min-h-18 fixed z-[1000]">
       <div className="mx-auto flex size-full auto-cols-fr items-center justify-between gap-4 lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr]">
-        <div className="flex min-h-16 flex-shrink-0 items-center">
-          <img src={logo.src} alt={logo.alt} />
+        <div className="flex min-h-16 flex-shrink-0 items-center w-[50px]">
+         <a href="Home"> <img src={logo.src}  /></a> 
         </div>
         <ul
           className={clsx(
-            "absolute left-0 top-16 flex h-dvh w-full flex-col items-center justify-start border-b border-border-primary bg-white px-[5%] pt-4 lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:border-none lg:px-0 lg:pt-0",
+            "absolute left-0 top-16 flex h-dvh w-full flex-col items-center justify-start border-b border-border-primary bg-white px-[5%] pt-4 lg:static lg:flex lg:h-auto lg:w-auto lg:flex-row lg:justify-center lg:border-none lg:px-0 lg:pt-0 max-[768px]:w-[20rem]",
             mobileMenuOpen ? "block" : "hidden"
           )}
         >
@@ -32,7 +52,7 @@ const Navbar = (props) => {
               ) : (
                 <a
                   href={link.url}
-                  className="relative block py-3 text-center text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-4 lg:py-2 lg:text-base"
+                  className="relative block py-3 text-center text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-20 lg:py-2 max-[768px]:py-[2rem]   Navlinks"
                 >
                   {link.title}
                 </a>
@@ -41,20 +61,39 @@ const Navbar = (props) => {
           ))}
         </ul>
         <div className="flex min-h-16 items-center justify-end gap-x-4">
-          <div>
+          <div className="flex">
             {buttons.map((button, index) => (
+              <a href="tel:9705809466">
               <Button
                 key={`${button.title}-${index}`}
                 variant={button.variant}
                 size={button.size}
-                className="px-4 py-1 md:px-6 md:py-2"
+                className="px-4 py-1 md:px-6 md:py-2 max-[768px]:py-[7px] rounded-[5px]"
+                
               >
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-6">
+  <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
+</svg>
+
                 {button.title}
               </Button>
+              </a>
+              
             ))}
+            <div className="pl-[2rem] pt-[5px]">
+            <a href="whatsapp://send?phone=9705809466"> 
+             <Image
+            src="/whatsapp.png"
+            width={30}
+            height={10}
+            
+            
+          /> </a>
+          </div>
+
           </div>
           <button
-            className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden"
+            className="-mr-2 flex size-12 flex-col items-center justify-center lg:hidden "
             onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
           >
             <div
@@ -68,6 +107,8 @@ const Navbar = (props) => {
         </div>
       </div>
     </nav>
+   
+    </div>
   );
 };
 
@@ -136,12 +177,14 @@ const NavItemDropdown = ({ title, subLinks }) => {
 
 const Navbar2Defaults = {
   logo: {
-    src: "https://relume-assets.s3.amazonaws.com/logo-image.svg",
+    src: "./Ebenezer.png",
     alt: "Logo image",
   },
   links: [
-    { title: "About", url: "#" },
-    { title: "Contact", url: "#" },
+    { title: "Home", url: "Home" },
+    { title: "About", url: "About" },
+    { title: "Contact", url: "Contact" },
+    
     
    
   ],

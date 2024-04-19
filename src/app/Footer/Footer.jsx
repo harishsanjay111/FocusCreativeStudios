@@ -60,8 +60,9 @@ const Footer4Defaults = {
   columnLinks: [
     {
       links: [
-        { title: "About", url: "#" },
-        { title: "Contact", url: "#" },
+        { title: "Home", url: "Home" }, 
+        { title: "About", url: "About" },
+        { title: "Contact", url: "Contact" },
         { title: "Call", url: "#" },
        
       ],
@@ -74,7 +75,7 @@ const Footer4Defaults = {
    
     
   ],
-  footerText: "© 2024 Relume. All rights reserved.",
+  footerText: "© 2024 Ebenezer. All rights reserved.",
  
 };
 

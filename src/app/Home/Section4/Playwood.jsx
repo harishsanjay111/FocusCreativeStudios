@@ -1,14 +1,16 @@
 'use client'
 import React from 'react';
 import { Button, ChevronRight } from '@relume_io/relume-ui';
-
+import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 const Plywood = (props) => {
   const { featureSections, image } = { ...Layout34Defaults, ...props };
 
   return (
+    <div>
+    <AnimateOnScroll delay={0.1}>
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
-      <div className='font-bold text-center pb-[5rem] text-[30px]'>Plywood</div>
+      <div className='font-bold text-center pb-[5rem] text-[30px] max-[768px]:text-[1.7rem]'>Plywood</div>
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
           <div className="grid grid-cols-1 gap-x-6 gap-y-8 py-2">
             {featureSections.map((section, index) => (
@@ -30,6 +32,8 @@ const Plywood = (props) => {
         </div>
       </div>
     </section>
+    </AnimateOnScroll>
+    </div>
   );
 };
 
@@ -37,23 +41,23 @@ const Layout34Defaults = {
   featureSections: [
     {
       
-      heading: 'Shipping and Logistics',
+      heading: 'Strength and Stability',
       description:
-        'Wooden pallets are widely used in the transportation and logistics industry for stacking, storing, and transporting goods efficiently.',
+        'Its cross-grain construction provides resistance to warping, twisting, and cracking, making it ideal for structural applications.',
       buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
     {
       
-      heading: 'Storage and Warehousing',
+      heading: 'Ease of Use and Installation',
       description:
-        'They provide a stable and organized platform for storing products in warehouses, distribution centers, and storage facilities.',
+        'Plywood is easy to work with and can be cut, shaped, and drilled using conventional woodworking tools.',
       buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
     {
      
-      heading: 'Material Handling',
+      heading: 'Cost-Effective Solution',
       description:
-        'Wooden pallets facilitate the movement of materials using forklifts, pallet jacks, and other handling equipment, streamlining warehouse operations.',
+        'Plywood offers excellent value for money, balancing performance with affordability,cost-effective choice for both residential and commercial projects.',
       buttons: [{ title: 'Button', variant: 'link', size: 'link', iconRight: <ChevronRight /> }],
     },
   ],

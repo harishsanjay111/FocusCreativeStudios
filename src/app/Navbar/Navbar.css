@@ -1,36 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
 
-
-
-
-
-nav ul{
-    float: left;
-    
-    margin-top: -2rem;
+.Navlinks{
+    font-family: "Sedan", serif;
+    font-weight: 400;
+    font-style: normal;
+    letter-spacing: 2px;
     
 }
-nav ul li{
-    display: inline-block;
-    line-height: 80px;
-    margin: 0 5px;
-    
-}
-nav ul li a {
-    color: rgb(10, 5, 5);
-    font-size: 17px;
-    padding: 7px 13px;
-    border-radius: 3px;
-    text-transform: uppercase;
-}
-@media screen and (max-width: 768px) {
-nav ul li{
-    
-   display :block;
-   text-align: center;
 
-   
-}    
-nav {
-    margin-bottom: -10rem;
+.Navlinks:hover {
+    transition: all 0.3s ease;
 }
-}
+
+
+
+

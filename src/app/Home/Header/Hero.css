@@ -1,0 +1,36 @@
+.Heading{
+    color: rgb(0, 0, 0);
+    
+}
+.Hero-Btn::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgb(24, 23, 23);
+}
+
+.About-btn {
+    border-radius: 5px;
+    background-color: rgb(26, 24, 24);
+    width: 100px; /* Initial width */
+    transition: width 0.3s ease, background-color 0.3s ease; /* Transition for width and background color change */
+}
+
+.About-btn:hover {
+    width: 110px;
+     /* Increased width on hover */
+    background-color:rgba(22, 22, 22, 0.66) /* Your hover background color */;
+
+}
+@media screen and (max-width:768px) {
+    .About-btn{
+        transition: none;
+
+    }
+    .About-btn:hover{
+        width: 100px;
+        background-color: black;
+    }
+}
