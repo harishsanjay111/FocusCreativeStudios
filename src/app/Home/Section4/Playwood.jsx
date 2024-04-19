@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Button, ChevronRight } from '@relume_io/relume-ui';
+import {  ChevronRight } from '@relume_io/relume-ui';
 import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 const Plywood = (props) => {
   const { featureSections, image } = { ...Layout34Defaults, ...props };

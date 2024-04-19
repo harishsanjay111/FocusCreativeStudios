@@ -1,5 +1,5 @@
 import React from "react";
-import { BiEnvelope, BiMessageDetail, BiPhone } from "react-icons/bi";
+import { BiEnvelope, BiPhone } from "react-icons/bi";
 import { Location } from "@relume_io/relume-ui";
 
 const Contact24Defaults = {

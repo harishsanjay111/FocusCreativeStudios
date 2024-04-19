@@ -1,6 +1,6 @@
 'use client'
 import React from 'react';
-import { Button, ChevronRight } from '@relume_io/relume-ui';
+import {  ChevronRight } from '@relume_io/relume-ui';
 import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 const WoodenPallets = (props) => {
   const { featureSections, image } = { ...Layout34Defaults, ...props };
@@ -69,29 +69,4 @@ const Layout34Defaults = {
 
 export default WoodenPallets;
 
-// const Layout34Defaults: Layout34Props = {
-//   featureSections: [
-//     {
-//       icon: { src: "https://relume-assets.s3.amazonaws.com/relume-icon.svg", alt: "Relume logo 1" },
-//       heading: "Shipping and Logistics",
-//       description:
-//         "Wooden pallets are widely used in the transportation and logistics industry for stacking, storing, and transporting goods efficiently.",
-//       buttons: [{ title: "Button", variant: "link", size: "link", iconRight: <ChevronRight /> }],
-//     },
-//     {
-//       icon: { src: "https://relume-assets.s3.amazonaws.com/relume-icon.svg", alt: "Relume logo 2" },
-//       heading: "Storage and Warehousing",
-//       description:
-//         "They provide a stable and organized platform for storing products in warehouses, distribution centers, and storage facilities.",
-//       buttons: [{ title: "Button", variant: "link", size: "link", iconRight: <ChevronRight /> }],
-//     },
-//     {
-//       icon: { src: "https://relume-assets.s3.amazonaws.com/relume-icon.svg", alt: "Relume logo 3" },
-//       heading: "Material Handling",
-//       description:
-//         "Wooden pallets facilitate the movement of materials using forklifts, pallet jacks, and other handling equipment, streamlining warehouse operations.",
-//       buttons: [{ title: "Button", variant: "link", size: "link", iconRight: <ChevronRight /> }],
-//     },
-//   ],
- 
-// };
+

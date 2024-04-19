@@ -5,7 +5,7 @@ import React from 'react';
 import "./Hero.css"
 
 const Hero = (props) => {
-  const { heading, image,buttons } = {
+  const { heading, image } = {
     ...Layout3Defaults,
     ...props,
   };

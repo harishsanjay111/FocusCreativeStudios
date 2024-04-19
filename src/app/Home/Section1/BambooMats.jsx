@@ -4,7 +4,7 @@ import React from 'react';
 import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 
 const BambooMats = (props) => {
-  const { featureSections, image } = { ...Layout34Defaults, ...props };
+  const { featureSections } = { ...Layout34Defaults, ...props };
 
   return (
     <div>
