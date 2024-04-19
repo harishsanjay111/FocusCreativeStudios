@@ -2,7 +2,7 @@ import React from 'react';
 import { Facebook, Instagram } from "@relume_io/relume-ui";
 
 const Footer = (props) => {
-  const { image, footerText, columnLinks, footerLinks, socialMediaLinks } = {
+  const { image, footerText, columnLinks, socialMediaLinks } = {
     ...Footer4Defaults,
     ...props,
   };

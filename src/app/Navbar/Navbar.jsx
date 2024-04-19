@@ -81,14 +81,14 @@ const Navbar = (props) => {
               
             ))}
             <div className="pl-[2rem] pt-[5px]">
-            <a href="whatsapp://send?phone=9705809466"> 
+           
              <Image
             src="/whatsapp.png"
             width={30}
             height={10}
             
             
-          /> </a>
+          /> 
           </div>
 
           </div>
