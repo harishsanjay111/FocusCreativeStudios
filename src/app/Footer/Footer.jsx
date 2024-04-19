@@ -1,3 +1,5 @@
+'use client'
+
 import React from 'react';
 import { Facebook, Instagram } from "@relume_io/relume-ui";
 

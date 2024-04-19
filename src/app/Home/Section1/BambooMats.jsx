@@ -1,14 +1,14 @@
 
 'use client'
 import React from 'react';
-import AnimateOnScroll from "../../Animation/AnimationOnScroll"
+
 
 const BambooMats = (props) => {
   const { featureSections } = { ...Layout34Defaults, ...props };
 
   return (
     <div>
-    <AnimateOnScroll delay={0.1}>
+   
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
       <div className='font-bold text-center pb-[5rem] text-[30px] max-[768px]:text-[1.7rem]'>Bamboo Mats</div>
@@ -34,7 +34,7 @@ const BambooMats = (props) => {
         </div>
       </div>
     </section>
-    </AnimateOnScroll>
+    
     </div>
   );
 };

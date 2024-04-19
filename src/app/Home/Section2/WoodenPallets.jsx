@@ -1,13 +1,13 @@
 'use client'
 import React from 'react';
 import {  ChevronRight } from '@relume_io/relume-ui';
-import AnimateOnScroll from "../../Animation/AnimationOnScroll"
+
 const WoodenPallets = (props) => {
   const { featureSections, image } = { ...Layout34Defaults, ...props };
 
   return (
     <div>
-    <AnimateOnScroll delay={0.1}>
+    
     <section className="px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
       <div className='font-bold text-center pb-[5rem] text-[30px] max-[768px]:text-[1.7rem]'>Wooden Pallets</div>
@@ -32,7 +32,7 @@ const WoodenPallets = (props) => {
         </div>
       </div>
     </section>
-    </AnimateOnScroll>
+   
     </div>
   );
 };

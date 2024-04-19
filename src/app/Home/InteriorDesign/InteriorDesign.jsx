@@ -1,7 +1,10 @@
+'use client'
+
+
 import React, { useState, useEffect } from 'react';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@relume_io/relume-ui';
 import clsx from 'clsx';
-import AnimateOnScroll from "../../Animation/AnimationOnScroll"
+
 
 const InteriorDesign = (props) => {
   const { heading, description, images } = { ...Gallery21DefaultProps, ...props };
@@ -26,7 +29,7 @@ const InteriorDesign = (props) => {
 
   return (
     <div>
-    <AnimateOnScroll delay={0.1}>
+    
         <section className="overflow-hidden px-[5%] py-16 md:py-24 lg:py-28">
       <div className="container">
         <div className="mb-12 md:mb-18 lg:mb-20">
@@ -62,7 +65,7 @@ const InteriorDesign = (props) => {
         </Carousel>
       </div>
     </section>
-    </AnimateOnScroll>
+   
 
     </div>
   );

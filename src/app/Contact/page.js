@@ -1,3 +1,5 @@
+"use client"
+
 import React from "react";
 import { BiEnvelope, BiPhone } from "react-icons/bi";
 import { Location } from "@relume_io/relume-ui";

@@ -1,5 +1,5 @@
 'use client'
-import AnimateOnScroll  from "@/app/Animation/AnimationOnScroll";
+
 import { Button } from "@relume_io/relume-ui";
 import React from 'react';
 import "./Hero.css"
@@ -11,7 +11,7 @@ const Hero = (props) => {
   };
   return (
     <div>
-    <AnimateOnScroll>
+    
     <section className="px-[5%] py-16 md:py-24 lg:py-28 max-[768px]:pt-[10rem] ">
       <div className="container">
         <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
@@ -34,7 +34,7 @@ const Hero = (props) => {
         </div>
       </div>
     </section>
-    </AnimateOnScroll>
+    
     </div>
   );
 };
