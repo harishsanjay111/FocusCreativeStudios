@@ -1,17 +1,28 @@
 @import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 .Navlinks{
-    font-family: "Sedan", serif;
-    font-weight: 400;
-    font-style: normal;
-    letter-spacing: 2px;
+    font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+    letter-spacing: 1px;
+    background-color: rgb(255, 255, 255);
     
 }
 
 .Navlinks:hover {
+    
     transition: all 0.3s ease;
 }
 
-
+.call-btn{
+   
+border: none;
+}
+.nav{
+    background-color: rgb(255, 255, 255);
+    border-bottom: 1px solid rgb(225, 219, 219);
+    box-shadow: 2px 3px 10px 1px rgb(174, 177, 178);
+}
 
 

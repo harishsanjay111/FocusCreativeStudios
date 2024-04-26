@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Lugrasimo&display=swap');
+
+
+.About-text{
+    background: linear-gradient(90deg, rgb(165, 165, 160) 0%, rgb(57, 69, 69) 60%, rgb(174, 203, 206) 100%);
+    -webkit-background-clip: text;
+    color: transparent;
+    font-weight: 900;
+    font-family: "Lato", sans-serif;
+    font-style :inherit;
+}
+.heading{
+    font-family: "Lugrasimo", cursive;
+  font-weight: 700;
+  font-style: normal;
+   color: rgb(71, 86, 86);
+}

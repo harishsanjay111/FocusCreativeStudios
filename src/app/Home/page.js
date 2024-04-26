@@ -1,25 +1,27 @@
 "use client"
 
 import Hero from "./Header/Hero";
-import BambooMats from "./Section1/BambooMats";
-import WoodenPallets from "./Section2/WoodenPallets";
-import InteriorDesign from "./InteriorDesign/InteriorDesign";
-import Have from "./SectionMain1/Have";
-import Plywood from './Section4/Playwood';
-import Do from "./SectionMain2/Do" ;
-
+import VideoEditing from "./VideoEditing/Videoediting"
+import Gallery from "./Gallery/Gallery";
+import WeddingTeasers from "./WeddingTeasers/WeddingTeasers"
+import PreWeddingTeasers from './PreWeddingTeasers/PreWeddingTeasers'
+import Birthday from "./Birthdays/Birthdays"
+import Commercial from "./Commerical/Commercial"
 import React from 'react'
 
 const HomePage = () => {
   return (
     <div>
     <Hero />
-    <Have />
-    <WoodenPallets />
-   <BambooMats />
-   <Plywood />
-   <Do />
-      <InteriorDesign  />
+    
+    <VideoEditing />
+   
+    <WeddingTeasers />
+   
+   <PreWeddingTeasers />
+   <Birthday />
+   <Commercial />
+      <Gallery  />
       
     </div>
   )

@@ -1,36 +1,45 @@
-.Heading{
-    color: rgb(0, 0, 0);
-    
+@import url('https://fonts.googleapis.com/css2?family=Sedan:ital@0;1&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+.heading{
+    background: linear-gradient(90deg, rgba(35, 35, 33, 1) 0%, rgba(110, 142, 142, 1) 60%, rgba(144, 172, 175, 1) 100%);
+-webkit-background-clip: text;
+color: transparent;
+font-weight: 900;
+font-family: "Lato", sans-serif;
+font-style :inherit;
 }
-.Hero-Btn::before{
-    content: "";
+.about-btn {
     position: absolute;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgb(24, 23, 23);
-}
-
-.About-btn {
+    letter-spacing: 1px;
+    background-color: rgb(37, 51, 56);
+    color: white;
+    border: none;
     border-radius: 5px;
-    background-color: rgb(26, 24, 24);
-    width: 100px; /* Initial width */
-    transition: width 0.3s ease, background-color 0.3s ease; /* Transition for width and background color change */
-}
-
-.About-btn:hover {
-    width: 110px;
-     /* Increased width on hover */
-    background-color:rgba(22, 22, 22, 0.66) /* Your hover background color */;
-
-}
-@media screen and (max-width:768px) {
-    .About-btn{
-        transition: none;
-
+    padding: 11px;
+    min-height: 10px;
+    min-width: 70px;
+    transition: background-color 0.3s ease; 
+    font-family: "Montserrat", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+  }
+  
+  /* Hover effect */
+  .about-btn:hover {
+    background-color: #514d53; /* Change background color on hover */
+    color: white;
+    
+  }
+  
+  
+  @media screen and (max-width:768px) {
+    .about-btn{
+      padding: 7px;
+      min-height: 33px;
+      min-width: 60px
+      
     }
-    .About-btn:hover{
-        width: 100px;
-        background-color: black;
-    }
-}
+  }

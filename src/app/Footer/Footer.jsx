@@ -1,7 +1,7 @@
 'use client'
 
 import React from 'react';
-import { Facebook, Instagram } from "@relume_io/relume-ui";
+import { Facebook,YouTube,Location } from "@relume_io/relume-ui";
 
 const Footer = (props) => {
   const { image, footerText, columnLinks, socialMediaLinks } = {
@@ -24,7 +24,7 @@ const Footer = (props) => {
                 <li key={`${link.title}-${linkIndex}`} className="font-semibold">
                   <a
                     href={link.url}
-                    className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
+                    className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 max-[768px]:text-[13px]"
                   >
                     {link.title}
                   </a>
@@ -35,6 +35,7 @@ const Footer = (props) => {
           <div className="flex items-start justify-start justify-items-center gap-x-3 lg:justify-self-end">
             {socialMediaLinks.map((link, index) => (
               <a
+              target="_blank"
                 key={`${link.title}-${index}`}
                 href={link.url}
                 className="ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2"
@@ -56,7 +57,7 @@ const Footer = (props) => {
 
 const Footer4Defaults = {
   image: {
-    src: "./Ebenezer.png",
+    src: "./FocusLogo.png",
     alt: "Logo image",
   },
   columnLinks: [
@@ -72,12 +73,15 @@ const Footer4Defaults = {
   ],
   socialMediaLinks: [
     { title: "Facebook", url: "#", icon: <Facebook /> },
-    { title: "Instagram", url: "#", icon: <Instagram /> },
+    
+    { title: "Youtube", url: "#", icon: <YouTube /> },
+    { title: "Location", url: "https://www.google.com/maps/place/Focus+Studio/@17.7278263,83.3082369,17z/data=!3m1!4b1!4m6!3m5!1s0x3a39433c0a9dfbc5:0x7b4689247c24c32c!8m2!3d17.7278263!4d83.3108118!16s%2Fg%2F11cp7f36pj?entry=ttu", icon: <Location  className='w-[22px]'/> },
+
    
    
     
   ],
-  footerText: "© 2024 Ebenezer. All rights reserved.",
+  footerText: "© 2024 Focus Creative Studios. All rights reserved.",
  
 };
 

@@ -1,52 +1,49 @@
-'use client'
-
+"use client";
+import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 import { Button } from "@relume_io/relume-ui";
-import React from 'react';
 import "./Hero.css"
-
-const Hero = (props) => {
-  const { heading, image } = {
-    ...Layout3Defaults,
+export const Header1 = (props) => {
+  const { heading, description, image } = {
+    ...Header1Defaults,
     ...props,
   };
   return (
-    <div>
-    
-    <section className="px-[5%] py-16 md:py-24 lg:py-28 max-[768px]:pt-[10rem] ">
+    <AnimateOnScroll delay={0.1}>
+    <header className="px-[5%]  py-16 max-[768px]:pt-[11rem] lg:py-38 ">
       <div className="container">
-        <div className="grid grid-cols-1 gap-y-12 md:grid-cols-2 md:items-center md:gap-x-12 lg:gap-x-20">
+        <div className="grid grid-cols-1 gap-x-40 gap-y-12 max-[768px]:gap-y-10 lg:grid-cols-2 lg:items-center">
           <div>
-            <h2 className="font-bold md:mb-6 md:text-6xl lg:text-10xl max-[768px]:pb-[1rem] max-[768px]:text-[3rem] Heading ">{heading}</h2>
-            <p className="md:text-md mb-[3rem]">"We Have <span  className='font-bold'>Bamboo Mats</span> ,<span className='font-bold'>Wooden Pallets</span> , <span className='font-bold'> PlyWood</span>  And Specialized in Doing <span className='font-bold'>Interior Designs</span>."</p>
-            <div className="mt-6 flex items-center gap-x-4 md:mt-8">
-           <Button className="About-btn">
-           <a href="About">About</a>
-           
-           </Button>
-           
-           <a href="Contact">Contact us ➢</a>
-          </div>
-          
+            <h1 className="mb-5   md:mb-6 max-[768px]:text-7xl lg:text-[4rem] heading max-[768px]:pb-[20px]">{heading}</h1>
+           <div className="max-[768px]:pb-[20px]">
+            <p className=" text-[14px] max-[768px]:text-[9px] ">{description}</p>
             </div>
-          <div>
-            <img src={image.src} className="w-full object-cover"  />
+            <div className="mt-6 flex gap-x-4 md:mt-8 ">
+              <Button className="about-btn text-[12px] max-[768px]:text-[10px]">
+              About
+              </Button>
+             
+            </div>
+            
+          </div>
+          <div className="pt-[5rem] max-[768px]:pt-[2rem] max-[768px]:mx-[auto] ">
+            <img src={image.src} className=" max-[768px]:w-[30rem] w-[32rem] object-cover" alt={image.alt} />
           </div>
         </div>
       </div>
-    </section>
-    
-    </div>
+    </header>
+    </AnimateOnScroll>
   );
 };
 
-const Layout3Defaults = {
-  heading: "Ebenezer",
+const Header1Defaults = {
+  heading: "Focus Creative Studios",
+  description:
+    "We breathe life into your vision. From capturing stunning visuals through videography and photography to crafting compelling narratives through video editing, we're your one-stop shop for all your creative content needs. Let us help you tell your story and leave a lasting impression.",
   
- 
   image: {
-    src: "./backgroundmain.png",
+    src: "FocusBG.png",
     alt: "Placeholder image",
   },
 };
 
-export default Hero;
+export default Header1;

@@ -7,7 +7,7 @@ import { AnimatePresence, motion } from "framer-motion";
 import Image from "next/image";
 import "./Navbar.css"
 const Navbar = (props) => {
-  const { logo, links, buttons } = {
+  const { logo, links, buttons, } = {
     ...Navbar2Defaults,
     ...props,
   };
@@ -34,10 +34,10 @@ const Navbar = (props) => {
   return (
     <div>
     
-    <nav className="flex h-auto min-h-16 w-full items-center border-b border-black bg-white px-[5%] lg:min-h-18 fixed z-[1000]">
+    <nav className=" flex h-auto min-h-16 w-full items-center border-b border-[#c3c9c5] bg-white px-[5%] lg:min-h-18 fixed z-[1000] nav ">
       <div className="mx-auto flex size-full auto-cols-fr items-center justify-between gap-4 lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr]">
         <div className="flex min-h-16 flex-shrink-0 items-center w-[50px]">
-         <a href="Home"> <img src={logo.src}  /></a> 
+         <a href="/"> <img src={logo.src}  /></a> 
         </div>
         <ul
           className={clsx(
@@ -62,33 +62,37 @@ const Navbar = (props) => {
         </ul>
         <div className="flex min-h-16 items-center justify-end gap-x-4">
           <div className="flex">
-            {buttons.map((button, index) => (
-              <a href="tel:9705809466">
+            {buttons.map((button,index) => (
+              <a
+              key={index}
+              href="tel:9705809466">
               <Button
-                key={`${button.title}-${index}`}
+                
                 variant={button.variant}
                 size={button.size}
-                className="px-4 py-1 md:px-6 md:py-2 max-[768px]:py-[7px] rounded-[5px]"
+                className="px-4 py-1 md:px-6 md:py-2 max-[768px]:py-[3px] rounded-[5px] max-[768px]:w-[50px] max-[768px]:text-[12px] bg-[#102104]  call-btn"
                 
               >
-              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" className="w-5 h-6">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1" stroke="currentColor" className="w-5 h-6 max-[768px]:w-[14px] ">
   <path stroke-linecap="round" stroke-linejoin="round" d="M2.25 6.75c0 8.284 6.716 15 15 15h2.25a2.25 2.25 0 0 0 2.25-2.25v-1.372c0-.516-.351-.966-.852-1.091l-4.423-1.106c-.44-.11-.902.055-1.173.417l-.97 1.293c-.282.376-.769.542-1.21.38a12.035 12.035 0 0 1-7.143-7.143c-.162-.441.004-.928.38-1.21l1.293-.97c.363-.271.527-.734.417-1.173L6.963 3.102a1.125 1.125 0 0 0-1.091-.852H4.5A2.25 2.25 0 0 0 2.25 4.5v2.25Z" />
 </svg>
 
-                {button.title}
+                
               </Button>
               </a>
               
             ))}
-            <div className="pl-[2rem] pt-[5px]">
-           
+            <div className="pl-[2rem] pt-[5px] ">
+           <a href="https://api.whatsapp.com/send?phone=9705809466">
              <Image
-            src="/whatsapp.png"
+             className="max-[768px]:w-[24px]"
+            src="/Whatsapp.png"
             width={30}
             height={10}
             
             
           /> 
+          </a>
           </div>
 
           </div>
@@ -177,11 +181,11 @@ const NavItemDropdown = ({ title, subLinks }) => {
 
 const Navbar2Defaults = {
   logo: {
-    src: "./Ebenezer.png",
+    src: "FocusLogo.png",
     alt: "Logo image",
   },
   links: [
-    { title: "Home", url: "Home" },
+    { title: "Home", url: "/" },
     { title: "About", url: "About" },
     { title: "Contact", url: "Contact" },
     
