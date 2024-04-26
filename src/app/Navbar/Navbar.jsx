@@ -37,7 +37,7 @@ const Navbar = (props) => {
     <nav className=" flex h-auto min-h-16 w-full items-center border-b border-[#c3c9c5] bg-white px-[5%] lg:min-h-18 fixed z-[1000] nav ">
       <div className="mx-auto flex size-full auto-cols-fr items-center justify-between gap-4 lg:grid lg:grid-cols-[0.375fr_1fr_0.375fr]">
         <div className="flex min-h-16 flex-shrink-0 items-center w-[50px]">
-         <a href="/"> <img src={logo.src}  /></a> 
+         <a href="/"> <img src={logo.src} /></a> 
         </div>
         <ul
           className={clsx(
@@ -52,7 +52,7 @@ const Navbar = (props) => {
               ) : (
                 <a
                   href={link.url}
-                  className="relative block py-3 text-center text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-20 lg:py-2 max-[768px]:py-[2rem]   Navlinks"
+                  className="relative block py-3 text-center text-md ring-offset-white focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-border-primary focus-visible:ring-offset-2 lg:px-20 lg:py-2 max-[768px]:py-[3rem] lg:text-[15px] max-[768px]:text-[12px]   Navlinks"
                 >
                   {link.title}
                 </a>

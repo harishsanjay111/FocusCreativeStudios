@@ -18,10 +18,14 @@ export const Header1 = (props) => {
             <p className=" text-[14px] max-[768px]:text-[9px] ">{description}</p>
             </div>
             <div className="mt-6 flex gap-x-4 md:mt-8 ">
-              <Button className="about-btn text-[12px] max-[768px]:text-[10px]">
+            <a href="About">
+              <Button 
+              
+              
+              className="about-btn text-[12px] max-[768px]:text-[10px]">
               About
               </Button>
-             
+              </a>
             </div>
             
           </div>
