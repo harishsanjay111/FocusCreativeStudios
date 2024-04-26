@@ -1,6 +1,7 @@
 "use client";
 import AnimateOnScroll from "../../Animation/AnimationOnScroll"
 import { Button } from "@relume_io/relume-ui";
+import Image from "next/image";
 import "./Hero.css"
 export const Header1 = (props) => {
   const { heading, description, image } = {
@@ -29,8 +30,15 @@ export const Header1 = (props) => {
             </div>
             
           </div>
-          <div className="pt-[5rem] max-[768px]:pt-[2rem] max-[768px]:mx-[auto] ">
-            <img src={image.src} className=" max-[768px]:w-[30rem] w-[32rem] object-cover" alt={image.alt} />
+          <div className="pt-[5rem] max-[768px]:pt-[2rem] max-[768px]:mx-[auto]  ">
+           
+            <Image
+            src="/FocusBG.png"
+      width={500}
+      height={500}
+      alt="Picture of the author"
+      className=" max-[768px]:w-[30rem] w-[32rem] object-cover img"
+    />
           </div>
         </div>
       </div>

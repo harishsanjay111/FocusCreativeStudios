@@ -65,7 +65,7 @@ const Navbar = (props) => {
             {buttons.map((button,index) => (
               <a
               key={index}
-              href="tel:9705809466">
+              href="tel:9052996664">
               <Button
                 
                 variant={button.variant}
@@ -83,7 +83,7 @@ const Navbar = (props) => {
               
             ))}
             <div className="pl-[2rem] pt-[5px] ">
-           <a href="https://api.whatsapp.com/send?phone=9705809466">
+           <a href="https://api.whatsapp.com/send?phone=9052996664">
              <Image
              className="max-[768px]:w-[24px]"
             src="/Whatsapp.png"

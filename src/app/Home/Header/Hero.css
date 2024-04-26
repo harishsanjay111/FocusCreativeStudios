@@ -33,6 +33,9 @@ font-style :inherit;
     color: white;
     
   }
+  .img{
+    border-radius: 20px;
+  }
   
   
   @media screen and (max-width:768px) {
