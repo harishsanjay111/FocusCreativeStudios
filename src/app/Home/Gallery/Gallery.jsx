@@ -40,7 +40,7 @@ const Gallery = (props) => {
   return (
     <AnimateOnScroll>
     <section>
-      <div className="px-[1%] py-16 md:py-24 lg:py-28 lg:w-[52rem] max-[768px]:w-[25rem] mx-[auto]">
+      <div className="px-[1%] py-16 md:py-24 lg:py-28 lg:w-[52rem] max-[768px]:w-[23rem] mx-[auto]">
         <div className="container">
           <div className="mb-12 text-center md:mb-18 lg:mb-10">
             <h2 className=" md:text-7xl lg:text-[33px] Gallery">{heading}</h2>
@@ -90,11 +90,11 @@ const Gallery15Defaults = {
   description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit.",
   images: [
     {
-      src: "image2.jpg",
+      src: "image13.jpg",
       alt: "Placeholder image 1",
     },
     {
-      src: "image3.jpg",
+      src: "image12.jpg",
       alt: "Placeholder image 2",
     },
     {
@@ -106,7 +106,7 @@ const Gallery15Defaults = {
       alt: "Placeholder image 3",
     },
     {
-      src: "image6.jpeg",
+      src: "image1.jpg",
       alt: "Placeholder image 3",
     },
     {
@@ -117,12 +117,9 @@ const Gallery15Defaults = {
       src: "image8.jpg",
       alt: "Placeholder image 3",
     },
+   
     {
-      src: "image9.jpg",
-      alt: "Placeholder image 3",
-    },
-    {
-      src: "image10.jpeg",
+      src: "image10.jpg",
       alt: "Placeholder image 3",
     },
   ],

@@ -72,7 +72,7 @@ const Footer4Defaults = {
     },
   ],
   socialMediaLinks: [
-    { title: "Facebook", url: "#", icon: <Facebook /> },
+    { title: "Facebook", url: "https://www.facebook.com/profile.php?id=100066493522546&locale=hi_IN", icon: <Facebook /> },
     
     { title: "Youtube", url: "#", icon: <YouTube /> },
     { title: "Location", url: "https://www.google.com/maps/place/Focus+Studio/@17.7278263,83.3082369,17z/data=!3m1!4b1!4m6!3m5!1s0x3a39433c0a9dfbc5:0x7b4689247c24c32c!8m2!3d17.7278263!4d83.3108118!16s%2Fg%2F11cp7f36pj?entry=ttu", icon: <Location  className='w-[22px]'/> },

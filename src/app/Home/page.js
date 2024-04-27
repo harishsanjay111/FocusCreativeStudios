@@ -8,7 +8,7 @@ import PreWeddingTeasers from './PreWeddingTeasers/PreWeddingTeasers'
 import Birthday from "./Birthdays/Birthdays"
 import Commercial from "./Commerical/Commercial"
 import React from 'react'
-
+import Testimonials from "./Testimonials/Testimonials"
 const HomePage = () => {
   return (
     <div>
@@ -22,6 +22,7 @@ const HomePage = () => {
    <Birthday />
    <Commercial />
       <Gallery  />
+      <Testimonials />
       
     </div>
   )
